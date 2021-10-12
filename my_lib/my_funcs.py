@@ -6,3 +6,6 @@ def convertFtoC(unitCol, tempCol):
 def roundedTemp(unitCol, tempCol):
     from pyspark.sql.functions import round, concat_ws
     return concat_ws(" ", round(tempCol, 2).cast("string"), unitCol).alias("rounded_temp")
+
+def my_func():
+    print(Hello!)
